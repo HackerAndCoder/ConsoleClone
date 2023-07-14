@@ -1,5 +1,5 @@
-import pygame, config
+import pygame, settings
 
 class Object:
     def __init__(self, texture : pygame.Surface):
-        self.texture = pygame.transform.scale(texture, (config.tile_size, config.tile_size))
+        self.texture = pygame.transform.scale(texture, (settings.tile_size, settings.tile_size))
