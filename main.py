@@ -1,8 +1,11 @@
 import display_handler, pygame
 
-screen = display_handler.DisplayHandler((600, 600), 'Lagacy game')
+screen = display_handler.DisplayHandler((600, 600), 'Legacy game')
 
 game_clock = pygame.time.Clock()
+
+def get_image(path):
+    return pygame.image.load(path)
 
 def handle_events(events_list):
     for event in events_list:
