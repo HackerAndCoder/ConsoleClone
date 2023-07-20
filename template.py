@@ -6,7 +6,6 @@ screen = display_handler.DisplayHandler((width_tiles * tile_size * screen_modifi
 
 game_clock = pygame.time.Clock()
 
-
 def handle_events(events_list : list):
     '''
     This isn't a mandatory function to use but it helps to structure and organize your code.
@@ -23,15 +22,16 @@ def handle_events(events_list : list):
             pygame.quit()
             exit()
 
-grass_texture = file_handler.get_texture('example')
+def init_game():
+    # insert initialisation code here
+    pass
 
-test_sprite = Sprite([grass_texture])
+init_game()
 
-screen.add_object(Object(grass_texture), (0, 0))
-screen.add_sprite(test_sprite, 'test_sprite', (0, 0))
-
+# gameloop
 while True:
     game_clock.tick(30)
     screen.tick()
     events = screen.get_event_queue()
     handle_events(events)
+    
